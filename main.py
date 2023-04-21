@@ -94,6 +94,25 @@ def app():
                 with col1 if i%2 == 0 else col2:
                     st.image(image_path, caption=dog_breed, use_column_width=True)
                     #else if the animal is a cat, display remaining images of the cat
+            st.header("Recommended Accessories for your pet: ")
+            st.image("./assets/dog/dog_accessories.jpeg", caption="Cat Accessories", use_column_width=True)
+            #write the accessories for the dog in markdown format
+            st.markdown("DOG KIT INCLUDES - ")
+            st.markdown("1.  2 Food bowls")
+            st.markdown("2.  1 Dog blanket")
+            st.markdown("3.  Dog Leash")
+            st.markdown("4.  1 Treat dispensing ball")
+            st.markdown("5.  1 Lick pad")
+            st.markdown("6.  1 Grooming glove")
+            st.markdown("7.  Treat Bag")
+            st.markdown("8.  2 Collapsible Travel Bowls")
+            st.markdown("9.  1 Puppy training clicker")
+            st.markdown("10. 1 Potty doorbells")
+            st.markdown("11. 1 Teeth cleaning chew ring")
+            st.markdown("12. 2 rope toys")
+            st.markdown("13. 6 rolls of waste bags with dispenser.")
+
+
         elif animal_type == "Cat":
             remaining_cat_breeds = [breed for breed in cat_breeds if breed != pred]
             st.title("You may also like: ")
@@ -107,6 +126,21 @@ def app():
                 with col1 if i%2 == 0 else col2:
                     st.image(image_path, caption=cat_breed, use_column_width=True)
                     #else if the animal is unknown, then write a message saying that the animal is not a cat or dog
+            st.header("Recommended Accessories for your pet: ")
+            st.image("./assets/cat/cat_accessories.jpeg", caption="Cat Accessories", use_column_width=True)
+            #write the accessories for the cat in markdown format
+            st.markdown("CAT KIT INCLUDES - ")
+            st.markdown("1.  Food and water bowls")
+            st.markdown("2.  A collar with ID tags")
+            st.markdown("3.  A scratching post or pad")
+            st.markdown("4.  A comfortable bed or blanket")
+            st.markdown("5.  A litter box and scoop")
+            st.markdown("6.  A selection of toys (such as interactive toys, balls, and catnip toys)")
+            st.markdown("7.  Grooming tools (such as a brush, nail clippers, and toothbrush)")
+            st.markdown("8.  A carrier for trips to the vet or travel")
+            st.markdown("9.  Treats and food for training and rewards")
+            st.markdown("10. A leash and harness for outdoor adventures (if applicable)")
+
         else:
             st.error("Sorry, the uploaded image is neither a cat nor a dog!")
 
