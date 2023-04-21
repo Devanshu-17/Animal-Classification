@@ -47,6 +47,8 @@ add_sbg_from_url()
 
 
 def app():
+    st.title("Pet Shop")
+
     file = st.file_uploader("Choose an image file", type=["jpg", "jpeg", "png"])
 
     #write the logo in the sidebar and add padding to the left
@@ -80,7 +82,7 @@ def app():
         st.info(f"Breed of the {animal_type.lower()} is: {pred}")
         probab = round(probs[pred_idx].item()*100, 2)
         #write probability in markdown format with bold text and large font size in a box with green background
-        st.markdown(f"<p style='font-size: 20px; color: red;'>Probability of the {animal_type.lower()} being a {pred} is: <b>{probab}%</b></p>", unsafe_allow_html=True)
+        st.markdown(f"<p style='font-size: 30px; font-family: Times; font-weight: bold; color: red;'>Probability of the {animal_type.lower()} being a {pred} is: <b>{probab}%</b></p>", unsafe_allow_html=True)
         
         # Display remaining images of the dog
         if animal_type == "Dog":
